@@ -186,6 +186,7 @@ function showProducts() {
 }
 
 function addInventory() {
+
     connection.query("SELECT * FROM products", function(err, res) {
 
         inquirer
@@ -262,11 +263,15 @@ function updateDatabase(numberPurchased, productChoice) {
     }) 
 }
 
+
+
 function addNewProduct (productChoice, department, price, stock, sales) {
     connection.query("insert into products (product_name, department_name, price, stock_quantity, product_sales)values("+"'"+productChoice+"'"+", "+"'"+department+"'"+","+price+","+stock+","+sales+")", function(err){
     if (err) throw err;
     }) 
 }
+
+
 
 
 function listDepartments() { 

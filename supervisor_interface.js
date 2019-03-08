@@ -137,7 +137,6 @@ function createDepartment () {
         .then(function(answer) {
             var departmentChoice = answer.name.toLowerCase()
             departmentChoice = departmentChoice.charAt(0).toUpperCase() + departmentChoice.slice(1)
-            console.log(departmentChoice)
             var cost = answer.cost
             addNewDepartment(departmentChoice, cost)
             connection.end()
