@@ -1,6 +1,5 @@
 # Inventory Management Simulator
 
-
 ## Description
 
 An application run in the terminal that uses a MySQL database to track the inventory of a store. The application comes with three main parts simulating customer purchases, managing inventory, and viewing sales and departments.
@@ -38,8 +37,6 @@ An application run in the terminal that uses a MySQL database to track the inven
     * The second option allows you to see your add a department
     * Once you add a new department you can add items to it using to manager_interface and view its sales
     ![Screenshot](Images/add-department.png)
-  
-
 
 ## Preview
 
@@ -49,3 +46,10 @@ An application run in the terminal that uses a MySQL database to track the inven
 This application requires node.js and MySQL to run. Your MySQL key should be included in a .env file as shown below
 
   * password='mypassword'
+  
+## Technologies Used
+   
+   * MySql
+   * Node.js
+   * Javascript
+   
