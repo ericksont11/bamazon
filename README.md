@@ -4,7 +4,7 @@
 
 An application run in the terminal that uses a MySQL database to track the inventory of a store. The application comes with three main parts simulating customer purchases, managing inventory, and viewing sales and departments.
 
-## Examples of how use each part of the application
+## Examples of how to use each part of the application
 
 1. To simulate a customer purchase
    * Enter "node customer_interface.js" into the terminal as highlighted in yellow below
