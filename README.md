@@ -11,7 +11,7 @@ Examples of how use each part of the application
 
 1. To simulate a customer purchase
    * node customer_interface.js
-   ![Screenshot](images/Customer_Interface.png)
+   ![Screenshot](Images/Customer_Interface.png)
    * If no movie name is included it will pull up information for the movie Mr.Nobody
    
 
