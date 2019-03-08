@@ -118,8 +118,7 @@ function viewSales () {
 }
 
 function createDepartment () {
-    console.log("New Department")
-    listDepartments()
+
     connection.query("SELECT * FROM departments", function(err, res) {
 
         inquirer
@@ -136,17 +135,20 @@ function createDepartment () {
             }
         ])
         .then(function(answer) {
-            var departmentChoice = answer.name.toUpperCase()
-            var profits = 0
+            var departmentChoice = answer.name.toLowerCase()
+            departmentChoice = departmentChoice.charAt(0).toUpperCase() + departmentChoice.slice(1)
+            console.log(departmentChoice)
             var cost = answer.cost
-            addNewDepartment(departmentChoice, profits, cost)
-
+            addNewDepartment(departmentChoice, cost)
+            connection.end()
         });
     })
 }
 
-function addNewDepartment (departmentChoice, profits, cost) {
-    connection.query("insert into departments (department_name, overhead_cost, profits)values("+"'"+departmentChoice+"'"+", "+"'"+cost+"'"+","+profits+")", function(err){
+function addNewDepartment (departmentChoice, cost) {
+    connection.query("insert into departments (department_name, overhead_costs)values("+"'"+departmentChoice+"'"+", "+"'"+cost+"'"+")", 
+    "insert into products (department_name)values("+"'"+departmentChoice+"'"+")", 
+    function(err){
     if (err) throw err;
     }) 
 }

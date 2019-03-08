@@ -246,8 +246,9 @@ function addProduct() {
             var department = answer.department
             var price = answer.price
             var stock = answer.stock
+            var sales = 0.00
 
-            addNewProduct(productChoice, department, price, stock)
+            addNewProduct(productChoice, department, price, stock, sales)
 
             showProducts()
         });
@@ -261,8 +262,8 @@ function updateDatabase(numberPurchased, productChoice) {
     }) 
 }
 
-function addNewProduct (productChoice, department, price, stock) {
-    connection.query("insert into products (product_name, department_name, price, stock_quantity)values("+"'"+productChoice+"'"+", "+"'"+department+"'"+","+price+","+stock+")", function(err){
+function addNewProduct (productChoice, department, price, stock, sales) {
+    connection.query("insert into products (product_name, department_name, price, stock_quantity, product_sales)values("+"'"+productChoice+"'"+", "+"'"+department+"'"+","+price+","+stock+","+sales+")", function(err){
     if (err) throw err;
     }) 
 }
