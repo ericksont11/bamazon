@@ -23,8 +23,7 @@ An application run in the terminal that uses a MySQL database to track the inven
    ![Screenshot](Images/manager-interface.png)
    * The first option allows you to see your inventory
    ![Screenshot](Images/view-inventory.png)
-   * The second option allows you to see your inventory that is running low ( >25 units)
-   While the third option allows you to restock your inventory 
+   * The second option allows you to see your inventory that is running low ( >25 units). While the third option allows you to restock your inventory 
    ![Screenshot](Images/low-add-inventory.png)
    * The fourth option allows you to add new items to your inventory
    ![Screenshot](Images/add-product.png)
@@ -34,8 +33,8 @@ An application run in the terminal that uses a MySQL database to track the inven
    ![Screenshot](Images/supervisor_interface.png)
    * The first option allows you to view your sales
    ![Screenshot](Images/view-sales.png)
-   * The second option allows you to see your add a department
-   * Once you add a new department you can add items to it using to manager_interface and view its sales
+   * The second option allows you to add a department
+   * Once you add a new department you can add items to it using the manager_interface and you can view the department's sales in supervisor interface
    ![Screenshot](Images/add-department.png)
 
 ## Preview
@@ -46,7 +45,7 @@ https://drive.google.com/file/d/1wqLuzk7Zw7XWHVrJYTBccfsi8ruqKJ8c/view
 
 ## Notes
 
-This application requires node.js and MySQL to run. Your MySQL key should be included in a .env file as shown below
+This application requires node.js and MySQL to run. Your MySQL password should be included in a .env file as shown below
 
   * password='mypassword'
   
