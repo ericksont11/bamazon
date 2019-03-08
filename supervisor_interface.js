@@ -109,8 +109,8 @@ function viewSales () {
                     tracker = false
                 }
                 if (i === (res.length-1)) {
-                    console.log("")
-                    choices()
+                    console.log("\n")
+                    connection.end()
                 }
             }
         });

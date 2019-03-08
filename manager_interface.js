@@ -4,6 +4,7 @@ const mysql = require("mysql")
 const inquirer = require("inquirer")
 const chalk = require("chalk")
 var tracker = true
+var choices = []
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -12,6 +13,8 @@ const connection = mysql.createConnection({
     database: 'bamazonDB',
     user: 'root'
 })
+
+
 inquirer
 .prompt(
     {
@@ -211,6 +214,7 @@ function addInventory() {
 }
 
 function addProduct() {
+    listDepartments()
     connection.query("SELECT * FROM products", function(err, res) {
 
         inquirer
@@ -222,18 +226,19 @@ function addProduct() {
             },
             {
             name: "department",
-            type: "input",
-            message: chalk.cyan.bold("\Enter the new department")
+            type: "rawlist",
+            choices: choices,
+            message: chalk.cyan.bold("\Choose the department")
             },
             {
             name: "price",
             type: "input",
-            message: chalk.cyan.bold("\Enter the new price")
+            message: chalk.cyan.bold("\Enter the price")
             },
             {
             name: "stock",
             type: "input",
-            message: chalk.cyan.bold("\Enter the new stock")
+            message: chalk.cyan.bold("\Enter the amount in stock")
             }
         ])
         .then(function(answer) {
@@ -260,4 +265,14 @@ function addNewProduct (productChoice, department, price, stock) {
     connection.query("insert into products (product_name, department_name, price, stock_quantity)values("+"'"+productChoice+"'"+", "+"'"+department+"'"+","+price+","+stock+")", function(err){
     if (err) throw err;
     }) 
+}
+
+
+function listDepartments() { 
+    
+    connection.query("SELECT department_name FROM departments GROUP BY department_name", function(err, res) {
+        for (var i = 0; i < res.length; i++) {
+            choices.push(res[i].department_name)
+          }
+    })
 }
