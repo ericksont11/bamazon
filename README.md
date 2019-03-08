@@ -10,9 +10,15 @@ An application run in the terminal that uses a MySQL database to track the inven
 Examples of how use each part of the application
 
 1. To simulate a customer purchase
-   * node customer_interface.js
+   * Enter "node customer_interface.js" into the terminal as highlighted in yellow below
+   * The first query asks the user to select the item they wish to purchase using the name or ID as highlighted in green below
+   * The second query asks the user to select the number of that item they wish to purchase
+   * After a successful purchase the cost is calculated and displayed and the inventory is adjusted as highlighted in red below
    ![Screenshot](Images/Customer-Interface.png)
-   * If no movie name is included it will pull up information for the movie Mr.Nobody
+   * If the user picks an item that is not in stock this will be the response
+   ![Screenshot](Images/not-in-stock.png)
+   * If the user tries to order more of an item than is currently in inventory this will be the response
+   ![Screenshot](Images/not-enough-inventory.png)
    
 
 
