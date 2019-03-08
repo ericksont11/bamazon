@@ -34,7 +34,7 @@ An application run in the terminal that uses a MySQL database to track the inven
     * Enter "node supervisor_interface.js" and you will be shown the following options
     ![Screenshot](Images/supervisor_interface.png)
     * The first option allows you to view your sales
-    ![Screenshot](Images/view-inventory.png)
+    ![Screenshot](Images/view-sales.png)
     * The second option allows you to see your add a department
     * Once you add a new department you can add items to it using to manager_interface and view its sales
     ![Screenshot](Images/add-department.png)
