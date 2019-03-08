@@ -60,7 +60,7 @@ function lowInventory() {
     
             for (i = 0; i < res.length; i++) {
 
-                if (res[i].stock_quantity < 100) {  
+                if (res[i].stock_quantity < 25) {  
                 
                 var idStr = res[0].item_id.toString()
                 var idSpace = ' '.repeat(7-(idStr).length);
@@ -129,7 +129,7 @@ function showProducts() {
           console.log(chalk.bgBlue.white.underline.bold("  Product ID#  |   Product Name   |   Department Name   |   Price   |   Quantity in Stock   "))
     
           for (i = 0; i < res.length; i++) {
-            var idStr = res[0].item_id.toString()
+            var idStr = res[i].item_id.toString()
             var idSpace = ' '.repeat(7-(idStr).length);
     
     
