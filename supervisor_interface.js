@@ -119,4 +119,34 @@ function viewSales () {
 
 function createDepartment () {
     console.log("New Department")
+    listDepartments()
+    connection.query("SELECT * FROM departments", function(err, res) {
+
+        inquirer
+        .prompt([
+            {
+            name: "name",
+            type: "input",
+            message: chalk.cyan.bold("\nEnter the new department name")
+            },
+            {
+            name: "cost",
+            type: "input",
+            message: chalk.cyan.bold("\nEnter the new department's overhead cost")
+            }
+        ])
+        .then(function(answer) {
+            var departmentChoice = answer.name.toUpperCase()
+            var profits = 0
+            var cost = answer.cost
+            addNewDepartment(departmentChoice, profits, cost)
+
+        });
+    })
+}
+
+function addNewDepartment (departmentChoice, profits, cost) {
+    connection.query("insert into departments (department_name, overhead_cost, profits)values("+"'"+departmentChoice+"'"+", "+"'"+cost+"'"+","+profits+")", function(err){
+    if (err) throw err;
+    }) 
 }
