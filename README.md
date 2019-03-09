@@ -12,9 +12,9 @@ An application run in the terminal that uses a MySQL database to track the inven
    * The second query asks the user to select how many of that item they wish to purchase
    * After a successful purchase the cost is calculated and displayed and the inventory is adjusted as highlighted in red below
    ![Screenshot](Images/Customer-Interface.png)
-   * If the user picks an item that is not in stock it will state, "We don't have the item you're looking for in stock! (Or you mistyped!)" as shown highlighted in red below
+   * If the user picks an item that is not in stock it will display an error message and void their order. In the case below the user tries to order a llama and is given the message, "We don't have the item you're looking for in stock! (Or you mistyped!)" as shown highlighted in red below
    ![Screenshot](Images/not-in-stock.png)
-   * If the user tries to order more of an item than is currently in inventory it will state, "We don't have enough in inventory to fulfill your order!" as shown highlighted in red below
+   * If the user tries to order more of an item than is currently in inventory it will display an error message and void their order. In the case below the user tries to order 100 sweaters when there are only 44 in inventory and is given the message, "We don't have enough in inventory to fulfill your order!" as shown highlighted in red below
    ![Screenshot](Images/not-enough-inventory.png)
    
    
