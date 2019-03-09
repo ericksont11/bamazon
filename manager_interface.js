@@ -62,7 +62,7 @@ function lowInventory() {
 
                 if (res[i].stock_quantity < 25) {  
                 
-                var idStr = res[0].item_id.toString()
+                var idStr = res[i].item_id.toString()
                 var idSpace = ' '.repeat(7-(idStr).length);
         
         
