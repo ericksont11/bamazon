@@ -34,7 +34,7 @@ An application run in the terminal that uses a MySQL database to track the inven
    * The first option allows you to view your sales
    ![Screenshot](Images/view-sales.png)
    * The second option allows you to add a department
-   * Once you add a new department you can add items to it using the manager_interface and you can view the department's sales in supervisor interface
+   * Once you add a new department you can add items to it using the manager_interface and you can view the department's sales in the supervisor_interface
    ![Screenshot](Images/add-department.png)
 
 ## Preview
